@@ -18,4 +18,9 @@ describe('validSpacing', () =>{
         expect(validSpacing('Hello World ')).toBe(false);
         expect(validSpacing(' Hello World ')).toBe(false);
     })
+
+    it('Should return false if has more than 2 spaces together', () =>{
+        expect(validSpacing('Hello  World')).toBe(false);
+        expect(validSpacing('Hello   World')).toBe(false);
+    })
 })
