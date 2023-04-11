@@ -6,6 +6,9 @@ const validSpacing = (str) => {
         return false;
     else if(str[0].includes(' ') || str[str.length - 1].includes(' '))
         return false;
+    else if(str.includes('  ')){
+        return false;
+    }
 }
 
 module.exports = {
