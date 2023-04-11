@@ -23,4 +23,8 @@ describe('validSpacing', () =>{
         expect(validSpacing('Hello  World')).toBe(false);
         expect(validSpacing('Hello   World')).toBe(false);
     })
+
+    it('should return true if has valid spacing', () =>{
+        expect(validSpacing('Hello World')).toBe(true);
+    })
 })
