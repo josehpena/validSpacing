@@ -12,4 +12,10 @@ describe('validSpacing', () =>{
 
         expect(result).toBe(false);
     })
+
+    it('Should return false if has a space at the start or end of the string', () =>{
+        expect(validSpacing(' Hello World')).toBe(false);
+        expect(validSpacing('Hello World ')).toBe(false);
+        expect(validSpacing(' Hello World ')).toBe(false);
+    })
 })
